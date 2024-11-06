@@ -2,7 +2,7 @@
 const config = require('../config');
 
 test('Delete Kit by ID and check the status code to be 200', async () => {
-	const kitId = 1;
+	
 	let actualStatusCode;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/1`, {
@@ -16,7 +16,7 @@ test('Delete Kit by ID and check the status code to be 200', async () => {
 });
 
 test('Check response body to confirm kit ID was deleted', async () => {
-	const kitId = 1;
+	
 	let actualResponseBody;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/1`, {
@@ -27,5 +27,5 @@ test('Check response body to confirm kit ID was deleted', async () => {
 		console.error(error);
 	}
 	expect(actualResponseBody).toEqual("{\"ok\":true}"); 
-;
+
 });
