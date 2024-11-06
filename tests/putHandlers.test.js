@@ -34,7 +34,7 @@ test('Should return correct data for updated product', async () => {
 				},
 				body: JSON.stringify(requestBody)
 			});
-	const actualResponseBody = await response.json();
+	actualResponseBody = await response.json();
 		} catch (error) {
 			console.error(error);
 		}
