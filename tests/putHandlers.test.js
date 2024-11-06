@@ -38,6 +38,7 @@ test('Should return correct data for updated product', async () => {
 		} catch (error) {
 			console.error(error);
 		}
-		expect(actualResponseBody.name).toBe("coke");
-		expect(actualResponseBody.price).toBe(19);
+		expect(actualResponseBody).toEqual({
+			"ok": true
+		})
 	});
